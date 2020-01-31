@@ -16,10 +16,14 @@ int drawCard(void){
 
 int calScore(int x,int y,int z){
 	int A;
-	if (x>9)x=x-10;
-	if (y>9)y=y-10;
-	if (z>9)z=z-10;
+	if (x>9)x=0;
+	if (y>9)y=0;
+	if (z>9)z=0;
 	A=x+y+z;
+	while(A>=10){
+		A=A-10;
+	}
+	return A;
 }
 
 int findYugiAction(int s){	
